@@ -1,6 +1,6 @@
 #sliders {
-  height: 400px;
-  width: 60%;
+  height: 550px;
+  width: 75%;
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -113,7 +113,7 @@ img {
   background-color: #FEE140;
   background-image: linear-gradient(90deg, #acfe40 0%, #FA709A 100%);
   color:black;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .unexposed-msg {
@@ -127,4 +127,14 @@ img {
     border-radius: 25px;
     height: 150px;
     text-align: center;
+}
+
+.Previous-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #ff7de9;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }

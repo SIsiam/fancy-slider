@@ -72,7 +72,7 @@ const selectItem = (ev, img) => {
   if (item === -1) {
     sliders.push(img);
   } else {
-    sliders.splice(item,1)
+    sliders.splice(item, 1)
     element.classList.toggle('added1');
   }
 
@@ -85,13 +85,15 @@ const createSlider = () => {
     alert('Select at least 2 image.')
     return;
   }
+
   // crate slider previous next area
-  sliderContainer.innerHTML = '';
+  sliderContainer.innerHTML = `<div><button class = "Previous-btn" onclick ="sliderPreviousBtn()" class="btn btn-primary px-5">Back To Previous</button></div>`;
   const prevNext = document.createElement('div');
   prevNext.className = "prev-next d-flex w-100 justify-content-between align-items-center";
   prevNext.innerHTML = ` 
   <span class="prev" onclick="changeItem(-1)"><i class="fas fa-chevron-left"></i></span>
   <span class="next" onclick="changeItem(1)"><i class="fas fa-chevron-right"></i></span>
+  
   `;
 
   sliderContainer.appendChild(prevNext)
@@ -109,13 +111,15 @@ const createSlider = () => {
     sliders.forEach(slide => {
       let item = document.createElement('div')
       item.className = "slider-item";
-      item.innerHTML = ` <div class = "negetive-value-slider">
-                          <h2>Ahhh!🛑 Negetive Value Not Allow!</h2>
-                          <p>So I'm Fixed Negetive Value Converted To Default Value</p>
-                         </div> 
-      <img class="w-100"
-          src="${slide}"
-          alt="">`;
+      item.innerHTML = `
+     
+      <img class="w-100" src="${slide}" alt="">
+
+      <div class = "negetive-value-slider">
+      <h2>Ahhh!🛑 Negetive Value Not Allow!</h2>
+      <h4>So I'm Fixed Negetive Value Converted To Default Value</h4>
+      </div>
+     `;
       sliderContainer.appendChild(item)
     })
     changeSlide(0)
@@ -191,6 +195,18 @@ let spinners = document.getElementById("my-spinners");
 const toggoleSpinners = () => {
   spinners.classList.toggle("d-none");
 
+}
+
+// Previous Button Click Code Here :
+
+const sliderPreviousBtn = () => {
+  imagesArea.style.display = 'block';
+  sliders = [];
+  clearInterval(timer);
+  const imagesItem = document.getElementsByClassName('added');
+  for (let i = 0; i <= imagesItem.length + 1; i++) {
+    imagesItem[0].classList.remove('added');
+  }
 }
 
 // Display and Block not found Images message
