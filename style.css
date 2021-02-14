@@ -1,0 +1,130 @@
+#sliders {
+  height: 400px;
+  width: 60%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.form-control{
+  background-color:rgb(0, 255, 191);
+  height: 65px;
+  padding: 22px;
+  border: none;
+  border-radius: 25px;
+}
+.btn{
+  border-radius: 1.5rem;
+  padding: 9px 20px;
+}
+
+.btn-privious{
+  background: rgba(83, 24, 223, 0.2);
+  color: #ffffff;
+}
+.navbar-toggler {
+  border: none;
+}
+.search-box{
+  position: relative;
+}
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.gallery-header {
+  display: none;
+}
+.gallery{
+  cursor: pointer;
+}
+
+.slider-item {
+  display: none;
+}
+
+.img-thumbnail {
+  cursor: pointer;
+}
+
+.added {
+  border: 3px solid #d618bd;
+  background-color: rgb(255, 0, 85);
+  border-radius: 8px;
+}
+#my-spinners {
+  text-align: center;
+  margin:auto ;
+
+}
+.added1 {
+  border: none;
+}
+
+img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.prev-next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
+}
+
+.prev, .next {
+  background-color: transparent;
+  padding: 8px 10px;
+  color: #fff;
+}
+
+.dot {
+  background-color: rgb(163, 156, 156);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.main {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .justify-content-around.align-items-center.mt-3.gallery-header.mb-2 {
+    flex-direction: column;
+  }
+  #sliders {
+    height: 300px;
+    width: 90%;
+  }
+}
+
+.negetive-value-slider {
+  width: 690px;
+  margin: 10px auto;
+  text-align: center;
+  padding: 10px;
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #acfe40 0%, #FA709A 100%);
+  color:black;
+  border-radius: 5px;
+}
+
+.unexposed-msg {
+    display: none;
+    background-color: #85FFBD;
+    color: black;
+    background-image: linear-gradient(45deg, #85b0ff 0%, #7dffaf 100%);
+    padding: 20px;
+    margin: 100px auto;
+    width: 45%;
+    border-radius: 25px;
+    height: 150px;
+    text-align: center;
+}
