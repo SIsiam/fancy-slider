@@ -50,8 +50,7 @@
 }
 
 .added {
-  border: 3px solid #d618bd;
-  background-color: rgb(255, 0, 85);
+  border: 3px solid #18d68d;
   border-radius: 8px;
 }
 #my-spinners {
@@ -59,10 +58,6 @@
   margin:auto ;
 
 }
-.added1 {
-  border: none;
-}
-
 img {
   height: 400px;
   object-fit: cover;
