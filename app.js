@@ -2,6 +2,7 @@ const imagesArea = document.querySelector('.images');
 const gallery = document.querySelector('.gallery');
 const galleryHeader = document.querySelector('.gallery-header');
 const undetectedImg = document.querySelector('.unexposed-msg');
+const mainDisplay = document.querySelector('.main');
 const searchBtn = document.getElementById('search-btn');
 const sliderBtn = document.getElementById('create-slider');
 const sliderContainer = document.getElementById('sliders');
@@ -198,8 +199,8 @@ const toggoleSpinners = () => {
 }
 
 // Previous Button Click Code Here :
-
 const sliderPreviousBtn = () => {
+  mainDisplay.style.display = 'none';  
   imagesArea.style.display = 'block';
   sliders = [];
   clearInterval(timer);
